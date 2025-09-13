@@ -1,0 +1,351 @@
+/* Dashboard Container */
+.dashboard-container {
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+   overflow-y: hidden; 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+   overflow-y: hidden;
+}
+
+/* Header Styles */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: #0d5bd8;
+  overflow-y: hidden; 
+}
+
+.search-container {
+  flex: 1;
+  max-width: 20rem;
+  color: #0d5bd8;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1rem;
+  width: 1rem;
+  color: #9ca3af;
+}
+
+.search-input {
+  width: 100%;
+  padding-left: 2.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  border-color: transparent;
+}
+
+
+/* calender icon */
+
+.date-container {
+  display: flex; 
+  align-items: center;
+   /* gap: 1rem;  */
+  margin-right: 42rem;
+  cursor: pointer;
+}
+
+.date-input {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+    cursor: pointer;
+
+}
+
+
+
+/* Cards Styles */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+   /* box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);  */
+  border: #d1d5db;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 640px) {
+  .cards-grid {
+    grid-template-columns: repeat(1, 0.5fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  padding: 1rem;
+  background-color: white;
+  /* box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); */
+  border-radius: 0.75rem;
+  cursor: pointer;
+ border: 1px solid white;
+}
+.card:hover {
+  border-color: #60a5fa;           
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5),
+              0 4px 6px -2px rgba(0, 0, 0, 0.5); 
+}
+.card-title {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card-change {
+  font-size: 0.895rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+
+}
+
+.card-change.cyan {
+  background-color: #ecfeff;
+  color: #155e75;
+}
+
+.card-change.blue {
+  background-color: #e2eeff;
+  color: #1946d8;
+}
+
+.card-change.pink {
+  background-color: #ffe1f2;
+  color: #e00c64;
+}
+
+.card-change.purple {
+  background-color: #f3e8ff;
+  color: #6b21a8;
+}
+
+
+
+/* Charts Styles */
+
+
+.charts-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.charts-section:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .charts-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+.chart-container {
+  background-color: white;
+  padding: 1.1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Bottom Section */
+
+
+.bottom-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .bottom-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Transactions Styles */
+
+
+.transaction-container {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.transaction-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.transaction-table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.table-header {
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-body {
+  color: #374151;
+}
+
+.table-body tr {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.table-body td {
+  padding: 0.5rem 0;
+}
+
+/* Goals Styles */
+
+
+.goals-container {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.goals-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.goal-item {
+  margin-bottom: 1rem;
+}
+
+.goal-name {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  height: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.progress-fill-blue {
+  background-color: #3b82f6;
+  height: 0.5rem;
+  border-radius: 9999px;
+}
+
+.progress-fill-green {
+  background-color: #10b981;
+  height: 0.5rem;
+  border-radius: 9999px;
+}
+
+.goal-amount {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.logo{
+Width: 2rem;
+height: 2rem;
+background-color: #155dfc ;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 0.7em; 
+}
+
+.Navigation{
+  width:fit-content;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.95rem;
+  border-radius: 0.5rem;
+  color: #718096;
+  cursor: pointer;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+gap: 1rem;   
+
+width: 13.8rem;
+}
+.Navigation:hover {
+  background-color: #f7fafc;     
+  color: #1559e1;                
+}
+/* Active state for nav items */
+.Navigation.active {
+            background-color: #eff6ff; /* blue-50 */
+            color: #2563eb; /* blue-600 */
+            font-weight: 600;
+        }
+.user{
+width: 2.5rem;
+height: 2.5rem;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+background: linear-gradient(to bottom right, #3b82f6, #9333ea);
+}
